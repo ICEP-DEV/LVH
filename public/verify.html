@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Verification</title>
+        <link href="styles.css" rel="stylesheet" />
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+        
+	
+    </head>
+    <body onload="verifyAccount()">
+        
+        <form onsubmit="return false" method="POST">
+            <div class="card-header"><h3 class="text-center font-weight-light my-4">Verification For <input type="text" name ="email" id="email" class="text-center font-weight-light my-4" readonly> Complete!</h3></div>
+                <script>
+                    var qryString = "https://lah.web.app/verify.html" + window.location.search;
+                    let emailStr = qryString.split('=')[1];
+                    document.getElementById('email').value  = emailStr;
+                </script>
+        </form>
+
+        <script src="firefunctions.js"></script>
+    </body>
+</html>

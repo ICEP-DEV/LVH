@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Error404</title>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+    <body onload="return check(); " > 
+	
+	
+
+    <script>    
+    function check(){
+    swal({
+    title:"OOPS!!",
+    text:"No hacker found with that email address, please register",
+    icon :"error",
+    button:true,
+    dangerMode: true,
+    }).then((isOkay)=> {
+    if(isOkay)
+    {
+                    
+        window.location.href = 'https://lah.web.app/Registration.html';
+
+    }
+    });
+
+    return false;
+
+    }
+
+    </script>
+
+    
+ 
+</body>
+</html>

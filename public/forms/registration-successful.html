@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Registration Successful</title>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+    <body onload="return check(); " > 
+	
+	
+
+    <script>    
+    function check(){
+    swal({
+    title:"Good job!!",
+    text:"You are registered, please check emails for verification.",
+    icon :"success",
+    button:true,
+    dangerMode: true,
+    }).then((isOkay)=> {
+    if(isOkay)
+    {
+                    
+        window.location.replace("../index.html");
+
+    }
+    });
+
+    return false;
+
+    }
+
+    </script>
+
+<script src="firefunctions.js"></script>
+ 
+</body>
+</html>

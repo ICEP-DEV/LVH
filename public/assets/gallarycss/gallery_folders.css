@@ -1,0 +1,133 @@
+
+.gallery_f body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+.active-button {
+    font-weight: bold;
+  }
+.gallery_f .header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery_f .gallary_nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery_f .gallary_nav ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+}
+
+.gallery_f .gallary_nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.gallery_f .gallary_nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.gallery_f .gallary_nav ul li a:hover {
+    background-color: #eee;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gallery_f .filter-group {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.gallery_f .filter-group select {
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    margin-right: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.gallery_f .filter-group select:focus {
+    border-color: #555;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.gallery_f .gallery-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery_f .gallery-item {
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.gallery_f .gallery-item img,
+.gallery_f .gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery_f .gallery-item.active {
+    display: block;
+}
+
+.gallery_f .gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery_f .gallery-item .info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.gallery_f .gallery-item.zoomed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    height: 80vh;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 1000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+
+.gallery_f .gallery-item.zoomed img,
+.gallery_f .gallery-item.zoomed video {
+    height: 100%;
+}
+
