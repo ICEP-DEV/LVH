@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student  already registered</title>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+    <body onload="return check(); " > 
+	
+	
+ <script>    
+function check(){
+
+
+swal({
+title:"Error",
+text:"The student number already exist.",
+icon :"warning",
+button:true,
+dangerMode: true,
+}).then((isOkay)=> {
+if(isOkay)
+{
+window.location.replace("../registrations.html");
+
+}
+});
+
+return false;
+
+}
+
+</script>
+
+    
+ 
+</body>
+</html>

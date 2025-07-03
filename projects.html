@@ -28,6 +28,89 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <!-- new header styling -->
+
+<style>
+  /* 1) Clean white header with slight shadow */
+  #header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    z-index: 1000;
+  }
+
+  /* 2) Logo text in navy (matches logo), a bit larger */
+  #header .logo h1 {
+    color: #0e2a47;        /* TUT dark blue */
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-left: 0.5rem;
+  }
+
+  /* 3) Nav links start in that same navy */
+  #header .navbar a {
+    color: #0e2a47 !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 0.25rem;
+    margin: 0 0.75rem;
+  }
+
+  /* 4) On hover or active—turn gold and draw an underline */
+  #header .navbar a:hover,
+  #header .navbar a.active {
+    color: #FFBA00 !important;
+  }
+  #header .navbar a:hover::after,
+  #header .navbar a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #FFBA00;
+  }
+
+  /* 5) Mobile toggle in navy */
+  .mobile-nav-toggle {
+    color: #0e2a47;
+  }
+
+  /* 6) Ensure your transparent logo pops on white */
+  #header .logo img {
+    background-color: #fff;
+    padding: 4px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+  /* Push the breadcrumbs content further down into the hero image */
+.breadcrumbs {
+  /* increase the top padding to move the text down */
+  padding: 12rem 0 4rem;  /* ← tweak the 12rem up/down to taste */
+  min-height: 400px;      /* ensure there’s always room */
+}
+
+/* Make sure your inner container centers vertically if needed */
+.breadcrumbs .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering in that padded area */
+  height: 100%;
+}
+
+/* Optional: enlarge your title & links so they fill the space nicely */
+.breadcrumbs h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.breadcrumbs ol li {
+  font-size: 1.2rem;
+}
+
+</style>
 
 </head>
 

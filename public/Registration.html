@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Registration Form</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+<script src="firefunctions.js"></script>
+
+
+
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+ 
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+  
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+
+ <style>
+    h2{
+    margin-top:20px;
+    margin-bottom:25px;
+    text-align:center;
+    }
+    .footer{
+    margin-top:20px;
+    }
+   
+    .btn{
+    margin-left:18%;
+    }
+    
+    .gif{
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  overflow: hidden;
+  z-index: 2;
+  cursor: progress;
+
+
+}
+.langa{
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: orange;
+  transform:  translate(-50%, -50%);
+  -ms-transform:  translate(-50%, -50%);
+
+
+}
+
+
+    </style>
+
+
+
+
+</head>
+
+<body onload="">
+    <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/Background/transparent.png" class="rounded mx-auto d-block" alt="Reload">
+        <h1>Limpopo Varsity <br>Hackathon </h1>
+      </a>
+
+      <!--<i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>-->
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html" class="active" >Home</a></li>
+          <li><a href="about.html" >About</a></li>
+          <li><a href="services.html">Rules</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="Blog Details.html" ></i>Prizes</a></li>
+          <li><a href="blog.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="staffregi.html">Staff</a></li>
+          </ul>
+		</nav>
+          
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+ <!-- ======= Breadcrumbs ======= -->
+ <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/Background/Registration.jpg');">
+  <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+    <h2>Registration</h2>
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li>Registration</li>
+    </ol>
+
+  </div>
+</div><!-- End Breadcrumbs -->
+<div >
+<h2>Please provide the following:</h2>
+</div>
+
+    <!-- ======= form Section ======= -->
+	<div class = "container">
+	
+   
+	
+		<form onsubmit="return false" method="POST" class="row g-3 needs-validation"> 
+     
+      
+       <!--dropbox for institition-->
+     <div class="form-group">
+      <label for="inputInstitution" class="col-sm-2 col-form-label">Institution</label>
+      <div class="col-sm-10">
+         <select  class="form-control form-control-sm"  name="institution" id="institution">
+      <option value="null"  >Select institution</option>
+      <option value="Tshwane University Of Technology">Tshwane University Of Technology</option>
+      <option value="University Of Limpopo">University Of Limpopo</option>
+      <option value="University Of Venda">University Of Venda</option>
+      <option value="University Of South Africa">University Of South Africa</option>
+    </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputAge" class="col-sm-2 col-form-label">Identity Number</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="id" name="id" maxlength="13" required>
+        <span class="ageText" style="color:red" id="ageText" name="ageText"></span>
+    </div>
+    </div>
+    <div class="form-group">
+      <label for="inputAge" class="col-sm-2 col-form-label">Names</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="name" name="name" required>
+        <span class="ageText"  style="color:red" ></span>
+    </div>
+    </div>
+    <div class="form-group">
+      <label for="inputAge" class="col-sm-2 col-form-label">Surname</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="surname"   name="surname" required>
+        <span class="ageText"  style="color:red" ></span>
+    </div>
+    </div>
+
+
+
+
+  <div class="form-group">
+    <label for="inputName" class="col-sm-2 col-form-label">Age</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="age" name="age" readonly>
+      <span class="nameText" id="nameText" name="nameText"  style="color:red" ></span>
+    </div>
+
+  </div>
+<!---->
+    
+
+    <div class="form-group">
+    <label for="inputSurname" class="col-sm-2 col-form-label">Gender</label>
+    <div class="col-sm-10">
+      <input type="text"  class="form-control" id="gender" name="gender" readonly >
+      <span class="surnameText"  style="color:red" ></span>
+    </div>
+    
+  </div>
+   <!--student number-->
+   <div class="form-group">
+    <label for="inputStudentNum" class="col-sm-2 col-form-label">Student Number</label>
+    <div class="col-sm-10">
+      <input type="text"  class="form-control" id="studentnum" name="studentnum" maxlength="9" required="">
+      <span class="studentnumText" id="studentnumText" name="studentnumText"  style="color:red"></span>
+    </div>
+    
+  </div>
+  
+  <div class="form-group">
+    <label for="inputStudentEmail" class="col-sm-2 col-form-label">Student Email</label>
+    <div class="col-sm-10">
+      <input class="form-control" id="email" name="email" readonly>
+      <span class="emailText" id="emailText" name="emailText"  style="color:red" ></span>
+    </div>
+  </div>
+  
+  
+  <!--dropbox for department-->
+     <div class="form-group">
+    <label for="inputDepartment" class="col-sm-2 col-form-label">Department</label>
+    <div class="col-sm-10">
+    <select  class="form-control form-control-sm"  onchange="GetSelectedTextValue(this)" name="department"  id="department">
+    <option value="null" >Select Department</option>
+      <option value="Computer of Science">Computer Science</option>
+      <option value="Computer Engineering">Computer Engineering</option>
+      <option value="Information Systems">Information Systems</option>
+      <option value="Information Technology">Information Technology</option>
+      <option value="Software Engineering">Software Engineering</option>
+      <option value="Software Engineering">Business Information Systems</option>
+      <option value="other">Other</option>
+</select>
+    </div>
+  </div>
+  
+  <!--specialization-->
+  <div class="form-group">
+    <label for="otherLabel" id="otherLabel" class="col-sm-2 col-form-label"   hidden="hidden" >Specify</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="other" name="other"  style="display: none;">
+      <span class="specialisationText"  style="color:red" ></span>
+    </div>
+  </div>
+  
+  <!--drop for level-->
+  <div class="form-group">
+    <label for="inputLevel" class="col-sm-2 col-form-label">Level</label>
+    <div class="col-sm-10">
+  <select  class="form-control form-control-sm" name="level" id="level">
+  <option value="null" >Select level</option>
+  <option value="Under-Graduate">Under-Graduate</option>
+  <option value="Post-Graduate">Post-Graduate</option>
+
+</select>
+    </div>
+  </div>
+  
+    <!--drop for Role-->
+  <div class="form-group">
+    <label for="inputRole" class="col-sm-2 col-form-label">Role</label>
+    <div class="col-sm-10">
+<select  class="form-control form-control-sm" name="role"  id="role">
+
+<option value="null" >Select Role</option>
+<option value="Scrum Master">Scrum Master</option>
+  <option value="Analyst">Analyst</option>
+  <option value="UX/UI">UX/UI</option>
+  <option value="programmer">Programmer</option>
+</select>
+    </div>
+</div>
+
+ 
+  
+ 
+<div class="form-group">
+  <div class="btn">
+  <div class="btn-group btn-group-sm" role="group">
+    <button  id="btn" onclick="check()" aria-label="Left Align"  class="btn btn-default ">SUBMIT</button>
+  </div>
+    </div>
+  </div>
+
+
+    </form>
+<!-- end of form-->
+  </div>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Limpopo Varsity Hackathon </h3>
+              <p>109 Market street
+                <br>Polokwane Ext 67<br>
+                0699<br><br>
+                <strong>Phone:</strong> 060 699 2594<br>
+                <strong>Email:</strong> rankoana@tut.ac.za<br>
+              </p>
+              <div class="social-links d-flex mt-3">
+                <a href="https://twitter.com/Official_TUT?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="d-flex align-items-center justify-content-center"> <i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/TUTCommunications/" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/tut_official2/?hl=en" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/school/tshwane-university-of-technology/mycompany/" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End footer info column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>IDE's link used</h4>
+            <ul>
+              <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+              <li><a href="https://notepad-plus-plus.org/downloads/">Note Pad++</a></li>
+              <li><a href="#https://www.sublimetext.com/">Sublime Text</a></li>
+              
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Development Tools</h4>
+            <ul>
+              <li><a href="https://www.tutorialspoint.com/html5/index.htm">HTML5</a></li>
+              <li><a href="https://www.c-sharpcorner.com/topics/ccs3">CSS3</a></li>
+              <li><a href="#https://getbootstrap.com/docs/3.3/getting-started/">Bootsrap</a></li>
+              <li><a href="javascript.com">Java Scripts</a></li>
+              <li><a href="https://angular.io">Angular</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Tutorial Website(s)</h4>
+            <ul>
+              <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+              <li><a href="https://www.freecodecamp.org/news/from-zero-to-front-end-hero-part-1-7d4f7f0bff02/">Free Coode Camp</a></li>
+              <li><a href="https://www.codewars.com/">CodeWars</a></li>
+              <li><a href="https://www.acefrontend.com/">Ace Front End</a></li>
+              <li><a href="https://javascript.plainenglish.io/10-best-websites-for-practising-and-perfecting-front-end-development-56e382b2c0ac">CSS Battles</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Limpopo Varsity Hackathon </span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/ -->
+         <a> Designed by TUT POLOKWANE ICEP TEAM 2022</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+  <script src="script.js">
+    
+  </script>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+
+
+
+</body>
+
+</html>
